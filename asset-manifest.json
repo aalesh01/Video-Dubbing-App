@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Video-Dubbing-App/static/css/main.ff169492.css",
-    "main.js": "/Video-Dubbing-App/static/js/main.2bc29d95.js",
+    "main.js": "/Video-Dubbing-App/static/js/main.a3613fad.js",
     "static/js/453.39bfcf16.chunk.js": "/Video-Dubbing-App/static/js/453.39bfcf16.chunk.js",
     "index.html": "/Video-Dubbing-App/index.html",
     "main.ff169492.css.map": "/Video-Dubbing-App/static/css/main.ff169492.css.map",
-    "main.2bc29d95.js.map": "/Video-Dubbing-App/static/js/main.2bc29d95.js.map",
+    "main.a3613fad.js.map": "/Video-Dubbing-App/static/js/main.a3613fad.js.map",
     "453.39bfcf16.chunk.js.map": "/Video-Dubbing-App/static/js/453.39bfcf16.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ff169492.css",
-    "static/js/main.2bc29d95.js"
+    "static/js/main.a3613fad.js"
   ]
 }
