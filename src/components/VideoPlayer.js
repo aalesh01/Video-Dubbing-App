@@ -23,7 +23,7 @@ const VideoPlayer = ({
   // };
 
   const handlePlaySynced = (e) => {
-    setPlayDubbed(true);
+    setPlayDubbed(!playDubbed);
     videoRef.current.currentTime = 0;
     videoRef.current.play();
   };
