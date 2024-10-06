@@ -10,7 +10,7 @@ const VideoPlayer = ({
 }) => {
   const videoRef = useRef(null);
   const { videoStatus, setVideoStatus } = useAppState();
-  const [videoSrc, setVideoSrc] = useState("/assets/videoplayback.mp4");
+  const [videoSrc, setVideoSrc] = useState("./assets/videoplayback.mp4");
 
   // const handlePlayPause = () => {
   //   if (videoStatus.playing) {
