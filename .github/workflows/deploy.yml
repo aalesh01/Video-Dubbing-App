@@ -1,30 +1,36 @@
-name: Deploy React App to GitHub Pages
+name: Build and Deploy
 
 on:
   push:
-    branches:
-      - main  # Run the workflow when changes are pushed to the main branch
+    branches: ["main"]
+
+permissions:
+  contents: write
 
 jobs:
-  deploy:
+  build-deploy:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [18.x]
+
     steps:
-    - name: Checkout the repository
-      uses: actions/checkout@v3  # Update to v3 to use Node.js 16
-
-    - name: Set up Node.js
-      uses: actions/setup-node@v3  # Make sure to use v3 here as well
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
       with:
-        node-version: '20'  # You can use Node.js 20
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Build the app
+        node-version: ${{ matrix.node-version }}
+        cache: "npm"
+    - name: Install Packages
+      run: npm ci
+    - name: Build
       run: npm run build
-
-    - name: Deploy to GitHub Pages
-      run: npm run deploy
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #- name: Test
+    #  run: npm test
+    - name: Deploy🚀
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: gh-pages
+        folder: build
