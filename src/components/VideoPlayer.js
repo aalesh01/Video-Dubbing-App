@@ -12,15 +12,15 @@ const VideoPlayer = ({
   const { videoStatus, setVideoStatus } = useAppState();
   const [videoSrc, setVideoSrc] = useState("/assets/videoplayback.mp4");
 
-  const handlePlayPause = () => {
-    if (videoStatus.playing) {
-      videoRef.current.pause();
-      setVideoStatus({ ...videoStatus, playing: false });
-    } else {
-      videoRef.current.play();
-      setVideoStatus({ ...videoStatus, playing: true });
-    }
-  };
+  // const handlePlayPause = () => {
+  //   if (videoStatus.playing) {
+  //     videoRef.current.pause();
+  //     setVideoStatus({ ...videoStatus, playing: false });
+  //   } else {
+  //     videoRef.current.play();
+  //     setVideoStatus({ ...videoStatus, playing: true });
+  //   }
+  // };
 
   const handlePlaySynced = (e) => {
     setPlayDubbed(true);
@@ -33,9 +33,9 @@ const VideoPlayer = ({
     setVideoStatus({ ...videoStatus, currentTime });
   };
 
-  const handleVideoUrlChange = (e) => {
-    setVideoSrc(e.target.value);
-  };
+  // const handleVideoUrlChange = (e) => {
+  //   setVideoSrc(e.target.value);
+  // };
 
   const handleFileSelect = (e) => {
     const file = e.target.files[0];

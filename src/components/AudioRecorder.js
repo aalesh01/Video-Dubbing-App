@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 
 const AudioRecorder = ({ audioUrl, setAudioUrl, playDubbed, startDubbing }) => {
   const [recording, setRecording] = useState(false);
-  const [audioBlob, setAudioBlob] = useState(null);
+  const [, setAudioBlob] = useState(null);
   const [mediaRecorder, setMediaRecorder] = useState(null);
   const audioChunks = useRef([]);
   const audioRef = useRef(null);
@@ -165,6 +165,7 @@ const AudioRecorder = ({ audioUrl, setAudioUrl, playDubbed, startDubbing }) => {
     if (!startDubbing && recording) {
       stopRecording();
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [startDubbing]);
 
   return (
