@@ -2,6 +2,7 @@
   "name": "video-audio-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://aalesh01.github.io/Video-Dubbing-App",
   "dependencies": {
     "@mui/material": "^6.1.2",
     "@reduxjs/toolkit": "^2.2.7",
@@ -17,6 +18,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -42,6 +45,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
+    "gh-pages": "^6.1.1",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.13"
   }
